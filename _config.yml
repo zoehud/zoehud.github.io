@@ -180,8 +180,8 @@ banner:
   background: "rgba(0, 0, 0, 0.8)" 
   height: "640px"           # Banner default height
   min_height: null          # Banner minimum height
-  heading_style: "font-size: 4em; font-weight: bold; color: #fff; text-align: center; text-shadow: 2px 2px 2px #333; display: block; margin-bottom: 10px;"
-  subheading_style: "font-size: 2em; font-weight: bold; color: #fff; text-align: center; text-shadow: 2px 2px 2px #333; display: block; margin-top: 10px;"
+  heading_style: "font-size: 4em; font-weight: bold; color: #FFFF99; text-align: center; text-shadow: 2px 2px 2px #333; display: block; margin-bottom: 10px;"
+  subheading_style: "font-size: 2em; font-weight: bold; color: #FFFF99; text-align: center; text-shadow: 2px 2px 2px #333; display: block; margin-top: 10px;"
 # Excerpt settings
 # excerpt:
 #   default_image: /assets/images/default-image.jpeg  # Default image when the image style is not none
