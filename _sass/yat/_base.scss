@@ -113,7 +113,8 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: #FFD700;
-  text-decoration: none;
+  text-decoration: none
+  background-color: $white-color ;
 
   &:hover {
     text-decoration: underline;
