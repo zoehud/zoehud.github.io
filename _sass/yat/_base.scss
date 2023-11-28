@@ -78,7 +78,13 @@ figcaption {
 }
 
 
-
+ .page-banner {
+    .page-banner-img {
+      & > *:first-child {
+        opacity: 0.718;
+      }
+    }
+  }
 /**
  * Lists
  */
