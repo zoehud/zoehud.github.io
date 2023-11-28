@@ -26,7 +26,7 @@
 # theme: owner/name --> Don't forget to remove/comment the gem-based theme option
 remote_theme: "jeffreytse/jekyll-theme-yat"
 
-title: ADA 2023
+title: From Damsels to Dialogue
 author: SugarPanDaddies5
 
 # Copyright setting
@@ -162,9 +162,9 @@ yat:
 
 # Page default value
 # defaults:
-#   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
+  home:
+   heading: "From Damsels to Dialogue"
+   subheading: "A Critical Examination of the Bechdel Test and Female Representation in Cinema"
 #     banner: "Your image url"
 
 # Banner default settings
