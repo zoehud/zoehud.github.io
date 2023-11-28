@@ -84,6 +84,7 @@
       lastScrollY = y;
       documentElement.setAttribute("data-scroll-status", scrollStatus);
     }
+    storeScrollData();
 
     window.addEventListener('scroll', function(e) {
       storeScrollData();
