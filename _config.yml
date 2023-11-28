@@ -26,9 +26,8 @@
 # theme: owner/name --> Don't forget to remove/comment the gem-based theme option
 remote_theme: "jeffreytse/jekyll-theme-yat"
 
-title: Your awesome title
-email: your-email@domain.com
-author: GitHub User
+title: From Damsels to Dialogue
+author: SugarPanDaddies5
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
