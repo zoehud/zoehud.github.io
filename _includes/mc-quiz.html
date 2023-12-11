@@ -56,8 +56,47 @@
 </script>
 
 <!-- HTML code for the quiz -->
-<div class="mcq panel panel-primary">
-  <!-- ... (rest of your quiz HTML) ... -->
+<div class="mcq panel panel-primary" id="quiz1"> <!-- Add a unique identifier, e.g., id="quiz1" -->
+ <!-- HTML code for the quiz -->
+<div class="mcq panel panel-primary" id="quiz1"> <!-- Add a unique identifier, e.g., id="quiz1" -->
+
+  <!-- Question Text -->
+  <div class="panel-heading">
+    Question: {{ include.text }}
+  </div>
+
+  <!-- Answer Choices -->
+  <div class="panel-body">
+    <table class="choices table" style="border-bottom:1px solid #ddd">
+      <tbody>
+        {% for choice in include.choices %}
+        <tr class="choice">
+          <td class="choice-radio col-xs-1">
+            <input type="radio" name="radio-choices">
+          </td>
+          <td class="choice-text">{{ choice | markdownify}}</td>
+          <td class="choice-feedback"><span class="hidden text-muted">{{ include.feedback[forloop.index0] | markdownify }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Feedback and Check/Try Again Buttons -->
+  <div class="feedback text-center">
+    <span class="success-msg lead text-success hidden">You have successfully completed this question!</span>
+  </div>
+  <div class="text-center" style="padding: 5px;">
+    <button class="check btn btn-primary" onclick="checkAnswer(this)">
+      Check Answer
+    </button>
+    <button class="reset btn btn-default" onclick="resetQuiz(this)">
+      Try Again
+    </button>
+  </div>
+
+</div>
+
   <button class="check btn btn-primary" onclick="checkAnswer(this)">
     Check Answer
   </button>
@@ -65,5 +104,3 @@
     Try Again
   </button>
 </div>
-
-
