@@ -21,7 +21,7 @@ banner: "/assets/images/banners/home.jpeg"
   /* Override the subheading styles specified in the config */
   {{ page.banner.subheading_style | replace: 'font-size', 'font-family: Impact; font-size' | replace: 'font-weight: bold;', 'font-weight: normal;' }}
 </style>
-{% include data/funquiz.html %}
+
 <h1> Abstract </h1>
 
 <p>Cinema is an art reflecting society and therefore, lays bare its inequalities, particularly concerning the portrayal of women on screen. The Bechdel Test provides a simple criterion to assess this representation in films and works of fiction. It highlights the underrepresentation of women, often relegated to secondary roles or romantic interests when they do appear in movies. The test has three criteria that a film must meet to pass:
@@ -30,3 +30,10 @@ banner: "/assets/images/banners/home.jpeg"
 <br> - These characters must have a conversation with each other.
 <br> - The conversation must be about something other than a man
 <br> Although this test appears like a bare minimum, less than half of noteworthy films from the past 40 years have passed. Using the CMU Movie Corpus we will proceed with a critical analysis of the Bechdel test and what it truly says about female representation in cinema.</p>
+
+
+{% assign q1_text = "This is an awesome template!" %}
+{% assign q1_choices = "True, False" | split: ', ' %}
+{% assign q1_feedbacks = "Correct!  This is an awesome template., How can you say that?!" | split: ', ' %}
+{% assign q1_correct = 0 %}
+{% include mc-quiz.html text=q1_text choices=q1_choices answer=q1_correct feedback=q1_feedbacks %}
