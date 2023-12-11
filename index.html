@@ -6,6 +6,8 @@ layout: home
 title: ADA
 banner: "/assets/images/banners/home.jpeg"
 ---
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <style>
   h1, h2 {
     font-family: 'Impact'; /* Use Impact font for headers */
@@ -31,3 +33,8 @@ banner: "/assets/images/banners/home.jpeg"
 <br> - The conversation must be about something other than a man
 <br> Although this test appears like a bare minimum, less than half of noteworthy films from the past 40 years have passed. Using the CMU Movie Corpus we will proceed with a critical analysis of the Bechdel test and what it truly says about female representation in cinema.</p>
 
+{% assign q1_text = "This is an awesome template!" %}
+{% assign q1_choices = "True, False" | split: ', ' %}
+{% assign q1_feedbacks = "Correct!  This is an awesome template., How can you say that?!" | split: ', ' %}
+{% assign q1_correct = 0 %}
+{% include_relative _includes/mc-quiz.html text=q1_text choices=q1_choices answer=q1_correct feedback=q1_feedbacks %}
