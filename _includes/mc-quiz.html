@@ -2,38 +2,36 @@
 <script>
   function checkAnswer(btn) {
     var answerIndex = {{include.answer}};
-    var feedback = btn.parentNode.previousElementSibling;
-    var feedbackMsg = feedback.firstElementChild;
-    var choices = feedback.previousElementSibling.firstElementChild.children;
-    var pBody = feedback.previousElementSibling.previousElementSibling;
+    var feedback = btn.parentNode.querySelector('.feedback');
+    var choices = feedback.previousElementSibling.querySelector('.choices').getElementsByTagName('input');
+    var pBody = feedback.previousElementSibling;
     var panel = pBody.parentNode;
 
+    var selectedChoice;
     for (var i = 0; i < choices.length; i++) {
-      var radio = choices[i].firstElementChild.firstElementChild;
-      radio.setAttribute('disabled', true);
-
-      if (radio.checked) {
-        var msg = choices[i].lastElementChild.firstElementChild;
-        msg.classList.remove('hidden');
-        panel.classList.remove('panel-primary');
-
-        if (i === answerIndex) {
-          panel.classList.add('panel-success');
-          feedbackMsg.classList.remove('hidden');
-        } else {
-          panel.classList.add('panel-danger');
-        }
+      choices[i].setAttribute('disabled', true);
+      if (choices[i].checked) {
+        selectedChoice = i;
       }
     }
 
-    btn.classList.add('disabled');
+    if (selectedChoice !== undefined) {
+      var msg = feedback.querySelector('.success-msg');
+      if (selectedChoice === answerIndex) {
+        panel.classList.add('panel-success');
+        msg.classList.remove('hidden');
+      } else {
+        panel.classList.add('panel-danger');
+      }
+    }
+
+    btn.setAttribute('disabled', true);
   }
 
   function resetQuiz(btn) {
-    var feedback = btn.parentNode.previousElementSibling;
-    var feedbackMsg = feedback.firstElementChild;
-    var choices = feedback.previousElementSibling.firstElementChild.children;
-    var pBody = feedback.previousElementSibling.previousElementSibling;
+    var feedback = btn.parentNode.querySelector('.feedback');
+    var choices = feedback.previousElementSibling.querySelector('.choices').getElementsByTagName('input');
+    var pBody = feedback.previousElementSibling;
     var panel = pBody.parentNode;
 
     panel.classList.remove('panel-success');
@@ -41,23 +39,15 @@
     panel.classList.add('panel-primary');
 
     for (var i = 0; i < choices.length; i++) {
-      var radio = choices[i].firstElementChild.firstElementChild;
-      radio.checked = false;
-      radio.removeAttribute('disabled');
-      var msg = choices[i].lastElementChild.firstElementChild;
-      msg.classList.add('hidden');
-      var text = feedback.previousElementSibling;
-      text.classList.remove('text-success');
-      text.classList.remove('text-danger');
+      choices[i].checked = false;
+      choices[i].removeAttribute('disabled');
     }
 
-    btn.previousElementSibling.classList.remove('disabled');
+    btn.previousElementSibling.removeAttribute('disabled');
   }
 </script>
 
 <!-- HTML code for the quiz -->
-<div class="mcq panel panel-primary" id="quiz1"> <!-- Add a unique identifier, e.g., id="quiz1" -->
- <!-- HTML code for the quiz -->
 <div class="mcq panel panel-primary" id="quiz1"> <!-- Add a unique identifier, e.g., id="quiz1" -->
 
   <!-- Question Text -->
@@ -95,12 +85,4 @@
     </button>
   </div>
 
-</div>
-
-  <button class="check btn btn-primary" onclick="checkAnswer(this)">
-    Check Answer
-  </button>
-  <button class="reset btn btn-default" onclick="resetQuiz(this)">
-    Try Again
-  </button>
 </div>
