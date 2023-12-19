@@ -45,21 +45,18 @@ banner: "/assets/images/banners/home.jpeg"
 </style>
 
 
-{% assign q1_text = "This is an awesome template!" %}
-{% assign q1_choices = "True, False" | split: ', ' %}
-{% assign q1_feedbacks = "Correct!  This is an awesome template., How can you say that?!" | split: ', ' %}
-{% assign q1_correct = 0 %}
-{% include_relative _includes/mc-quiz.html text=q1_text choices=q1_choices answer=q1_correct feedback=q1_feedbacks %}
-
-
 <h2> The bare minimum... right ? </h2>
 
 <p>Cinema is an art reflecting society and therefore, lays bare its inequalities, particularly concerning the portrayal of women on screen. The Bechdel Test provides a simple criterion to assess this representation in films and works of fiction. It highlights the underrepresentation of women, often relegated to secondary roles or romantic interests when they do appear in movies. The test has three criteria that a film must meet to pass:
  it must have at least two named female characters, these characters must have a conversation with each other, and the conversation must be about something other than a man.
-<br> Although this test appears like a bare minimum, less than half of noteworthy films from the past 40 years have passed.</p>
+<br> Although this test seems like a bare minimum, less than half of noteworthy films from the past 40 years have passed.</p>
 
 <h2> So which movies make the cut ? </h2>
-<p>Using a merged version of the CMU Movie Corpus and the Bechdel Score dataset, we take a look at a variety of features to determine their impact on the movie's success in the test.</p>
+<p>Using a merged version of the CMU Movie Corpus and the Bechdel Score dataset, we take a look at a variety of features to determine their impact on the movie's success in the test. <br> For more information about our datasets head over to our "Data" tab ! </p>
+<p><strong> TIME </strong>
+The representation of minorities in media has only truly become a mainstream question in Western culture in the past century. Indeed, it was secondary to basic rights such as voting, financial independence, bodily autonomy, many of which were accorded to women only in the midst of the 20th century.
+So it is rational to expect an increase in movies including women as equals to their male counterparts over the years. 
+</p>
 <p><strong> GENRE </strong>
 <br> The genres with the highest proportions of films that pass the test are the three subsets of "romance", followed by "horror". On the other hand, the worst offenders are movies classified as "action" and/or "adventure".
 <br> At first this is surprising, considering that romance films are largely centered around a heterosexual relationship, we could be inclined to believe that these movies would find it difficult to represent a conversation between two women about something other than a man.
