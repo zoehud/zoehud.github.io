@@ -51,9 +51,7 @@ body {
   backface-visibility: hidden;
 }
 
-.front-face {
-  transform: rotateY(0deg); /* Remove the 180deg rotation */
-}
+
 
 .back-face {
   z-index: 2;
