@@ -52,5 +52,5 @@ body {
 }
 
 .front-face {
-  transform: rotateY(180deg);
+  transform: rotateY(0deg); /* Remove the 180deg rotation */
 }
