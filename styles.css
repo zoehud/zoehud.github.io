@@ -58,6 +58,5 @@ body {
   position: absolute;
   border-radius: 5px;
   background: #e2e2e2;
-  frontface-visibility: visible;
   transform: rotateY(0deg); /* Remove the 180deg rotation */
 }
