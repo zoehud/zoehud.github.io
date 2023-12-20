@@ -153,12 +153,13 @@ content_width: "920px"
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-# header_pages:
-#   - index.html
-#   - archives.html
-#   - categories.html
-#   - tags.html
-#   - about.md
+header_pages:
+  - index.html
+  - archives.html
+  - categories.html
+  - tags.html
+  - about.md
+  - data.html
 
 # Page default value
 # defaults:
