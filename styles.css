@@ -52,5 +52,12 @@ body {
 }
 
 .front-face {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  border-radius: 5px;
+  background: #e2e2e2;
+  frontface-visibility: visible;
   transform: rotateY(0deg); /* Remove the 180deg rotation */
 }
