@@ -102,7 +102,8 @@ The proportion of films passing the test became more stable, and experienced les
  {% include_relative _includes/plots/prodcomp_pass.html %}
 <p>
   After completing a Mann-Whitney U Test on our data, we are unable to reject the null hypothesis that the proportions of films that pass the test for each company as an average over time are significantly different. 
-  We are already inclined to dismiss the production company as a variable that adds value to future predictive models, and this first impression is confirmed in future analyses.
+  We are already inclined to dismiss the production company as a variable that adds value to future predictive models, but we further apply a Levene's test to explore the validity of the null hypothesis that the variance of the proportion of movies that pass the test for each company over the years is equal two by two between companies.
+  The results of this test allow us to dismiss this hypothesis at the 0.05% level only between Warner Bros. and Universal Pictures, implying that companies have followed similar time trends in the quantity of films they produce that pass the test.
 </p>
 </p>
 
