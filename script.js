@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.memory-card');
-
+let hasFlippedCard = false;
 function flipCard() {
   // Toggle the 'flip' class to show the back of the card
   this.classList.toggle('flip');
