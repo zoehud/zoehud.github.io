@@ -36,4 +36,16 @@ title: Data
 <h2> CMU Dataset </h2>
 <p> The CMU Dataset contains both plot summaries and Metadata about the movies. It contains 81741 entries. The Metadata includes Movie Runtime, Box Office Revenue, langages, movie genres, countries, release date, Wikipedia Page ID. Movie years range from 1897 to 2016. 
 
-  <p>
+  </p>
+<h2>Bechdel Dataset</h2>
+<p>The Bechdel Dataset is downloaded from the webpage BechdelTest.com. It gives the result of the Bechdel Test for 10136 movies, as well as release yearn and IMDB page ID. This database is constantly supplied, and verified by users. 
+</p>
+
+<h2>Merging the two</h2>
+<p>The CMU Metadata dataframe and Bechdel dataframe do not have a common column of identical unique IDs on which the merge could be performed. It was therefore necessary to request the Wikipedia Page IDs from Movie title and year from the Bechdel data. Then, the two dataframes were merged on those IDs, creating a merged dataset of 5816 movies (57 % of Bechdel movies are in the merged dataset). The obtained merged dataframe is large enough to perform statistical analysis. 
+</p>
+<h2>Representativeness of the data</h2>
+<p>
+The CMU dataset contains films up to 2017, while the Bechdel database contains films up to the latest Box Office releases. It will not be possible to look at the five past years, although these years may be among the most interesting in the present study, since the movie industry has evolved very fast with MeToo and Netflix among others. 
+The study carried out here will be mainly representative of the years 2010-2015, which corresponds to the peak of films from the two data sources. 
+</p>
