@@ -1,34 +1,17 @@
 const cards = document.querySelectorAll('.memory-card');
-
 let hasFlippedCard = false;
-let lockBoard = false;
-let flippedCard;
 
 function flipCard() {
-  if (lockBoard) return;
-
-  this.classList.add('flip');
-
   if (!hasFlippedCard) {
+    // Toggle the 'flip' class to show the back of the card
+    this.classList.toggle('flip');
     hasFlippedCard = true;
-    flippedCard = this;
   } else {
-    // You can perform any logic related to the flipped card here
-    // For example, you can access the flippedCard.dataset.framework
-    console.log('Flipped Card:', flippedCard.dataset.framework);
+    // Toggle the 'flip' class to show the back of the card
+    this.classList.toggle('flip');
+    hasFlippedCard = false;
   }
 }
 
-function resetBoard() {
-  [hasFlippedCard, lockBoard] = [false, false];
-  flippedCard = null;
-}
-
-(function shuffle() {
-  cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 16);
-    card.style.order = randomPos;
-  });
-})();
-
+// Add a click event listener to each card
 cards.forEach(card => card.addEventListener('click', flipCard));
