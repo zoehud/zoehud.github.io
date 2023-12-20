@@ -2,3 +2,33 @@
 layout: about
 title: Data
 ---
+
+
+<style>
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+</style>
+
+<style>
+  h1, h2 {
+    font-family: 'Impact'; /* Use Impact font for headers */
+  }
+
+  p {
+    font-family: 'Roboto'; /* Use sans-serif for paragraphs */
+    text-align: justify;
+  }
+
+  /* Override the heading styles specified in the config */
+  {{ page.banner.heading_style | replace: 'font-size', 'font-family: Impact; font-size' | replace: 'font-weight: bold;', 'font-weight: normal;' }}
+  
+  /* Override the subheading styles specified in the config */
+  {{ page.banner.subheading_style | replace: 'font-size', 'font-family: Impact; font-size' | replace: 'font-weight: bold;', 'font-weight: normal;' }}
+   body {
+  /* Other styles */
+  font-size: 20px; /* Change this value to make the body text bigger */
+  /* Other styles */
+}
+</style>
