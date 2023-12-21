@@ -162,14 +162,14 @@ The proportion of films passing the test became more stable, and experienced les
   We further complement the analysis with a chi-squared test of independence, which once again does not allow us to reject the null hypothesis at the 0.05% confidence level. Through this extensive testing, we can conclude with relative certainty that the production company does influence the score of movies on the Bechdel test.
 </p>
 <p><strong> BOX OFFICE REVENUE </strong>
-  A film's success is often measured by the revenue it brings in at the box office, which reflects the quantity of people who went to the theatre to see the movie. 
+ <br> A film's success is often measured by the revenue it brings in at the box office, which reflects the quantity of people who went to the theatre to see the movie. 
   First we adjust the movies in the dataset's revenues for inflation using the CPI yearly for the US dollar, then calculate weighted proportions in order to adjust for the fact that much fewer films make very high amounts and most make between $0 to $100 million.
   This reveals a graphically negative relationship between revenue and a positive result on the Bechdel test. We confirm this visual interpretation with Spearman's coefficient test, which is statistically significant and strongly negative.
   
 <br> {% include_relative _includes/plots/revenue_pass_infl.html %}
 </p>
 <p><strong> RUNTIME </strong>
-It could be expected that a longer film is more likely to contain dialogue between two women, and thus has more chance to pass the Bechdel test. In the end, the distributions are not significantly different (p-val of the TTest is 0.46), and Movie Runtime is discarded from the features of interest. 
+<br> It could be expected that a longer film is more likely to contain dialogue between two women, and thus has more chance to pass the Bechdel test. In the end, the distributions are not significantly different (p-val of the TTest is 0.46), and Movie Runtime is discarded from the features of interest. 
 By exploring this data, it was found that some films lasting over three hours don't even pass the Bechdel condition of having two named women !
 {% include_relative _includes/plots/bxplt_time.html %}
 </p>
