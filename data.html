@@ -64,6 +64,15 @@ title: Data
 The CMU dataset contains films up to 2017, while the Bechdel database contains films up to the latest Box Office releases. It will not be possible to look at the five past years, although these years may be among the most interesting in the present study, since the movie industry has evolved very fast with MeToo and Netflix among others. 
 The study carried out here will be mainly representative of the years 2005-2012, which corresponds to the peak of films from the two data sources. 
 </p>
+{% include_relative _includes/number_peryear.html %}
+ <p>
+  Both datasets have similar percentages of scores on the Bechdel test, meaning that they represent a similar subset of movies when it comes to the test.
+ </p> 
 {% include_relative _includes/plots/comparison_rating_bech_merged.html %}
+ <p>
+  We note the importance of taking percentages when analyzing our data, as although there are high peaks of movies that pass the test in certain years, they are mirrored by a high number of failures. These peaks are brought about by the inequal balance of our data over time.
+ </p> 
+{% include_relative _includes/passfail_peryear.html %}
+
 
 
