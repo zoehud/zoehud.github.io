@@ -6,7 +6,7 @@
         {%- assign currentYear = 'now' | date: "%Y" -%}
         {%- assign copyright = site.copyright
             | replace: '{currentYear}', currentYear
-            | replace: '{author}', site.author
+            | replace: '{author}', 'Anabelle Ayma, Thibault Golaz, Zoë Marsaly, Juliette Salles, Nicola Spoletini'  
             | replace: '(c)', '&copy;'
             | replace: '(p)', '℗'
             | replace: '(cleft)', '<span class="copyleft">&copy;</span>'
