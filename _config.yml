@@ -157,6 +157,7 @@ header_pages:
   - index.html
   - about.md
   - data.html
+  - readmore.html
 
 # Page default value
 # defaults:
