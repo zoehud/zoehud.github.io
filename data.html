@@ -55,7 +55,7 @@ title: Data
   We downloaded Consumer Price Indices from the <a https://stats.oecd.org/index.aspx?DataSetCode=PRICES_CPI#>OECD</a> site. These indices represent the relative price for a representative basket of goods and services over a certain period. We chose to use yearly data from the United States, meaning we had indices going back almost 70 years to 1955. 
   This data complemented our existing datasets nicely, as all box office revenues in the CMU Dataset are quoted in USD, and for most all movies we have the year of release, whereas we only have specific months and days for a lesser subset. 
   It is possible to manipulate the CPI in order to obtain inflation coefficients from each year in the past to the most recent year in the dataset, 2022. The formula we employ is as follows :
-  \( Price_{2022} = Price_{PAST} * \frac{{CPI_{2022}}}{{CPI_{PAST}}} \)
+  \[ Price_{2022} = Price_{\text{PAST}} \times \frac{{CPI_{2022}}}{{CPI_{\text{PAST}}}} \]
 </p>
 
 <h2>Merging the two</h2>
