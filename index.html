@@ -205,11 +205,14 @@ As the representation of women in films is heavily influenced by those behind th
 
 <p>This graph offers a visual representation of the changing weighted proportions of female directors and writers, as well as the proportion of movies passing the Bechdel test, across different decades. As seen in the previous figures, there is a clear correlation between the proportion of movies passing the Bechdel test and the proportions of female directors and writers.</p>
 
-<h2> IN FRONT OF THE CAMERA </h2>
-{% include_relative _includes/plots/bechdel_plotly_histogram_with_kde_and_colors.html %}
+
+
 
 
 <h2> WHAT MOVIE CHARACTERISTICS CAUSE BECHDEL RESULTS? </h2>
+<p> We can clearly see that the distribution of actresses in movies passing the test has a way higher mean. After all the other analyses, this seems to be the most suitable variable to predict whether a movie passes the test or not. However, there might confounding variables that prevent us from making this claim.
+</p>  
+{% include_relative _includes/plots/bechdel_plotly_histogram_with_kde_and_colors.html %}
 <p>In order to improve the analysis, we perform a causal analysis. We are interested in knowing the actual impact of the proportion of actresses in a movie on whether a movie passes the Bechdel test or not. As this variable may be influenced by other variables, a causal analysis seems to be relevant. 
 First of all, we separated the data set according to the proportion of actresses, that is one subpart with more than 50% of actresses and another subpart with less. Then, we balanced the subsets using the propensity scores (probability of a data point to be in either subset). We match each data point in one group with exactly one data point from the other group.
 Now, we can compare the distribution of movies passing the Bechdel test in each group. As expected, a higher proportion of women seems to have a clear impact on this. Only half of the movies pass the test in the group where actresses are in a minority, while 80% of movies do when there is a majority of them.
