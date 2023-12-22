@@ -292,7 +292,7 @@ As the representation of women in films is heavily influenced by those behind th
 
 
 
-<h2> WHAT MOVIE CHARACTERISTICS CAUSE BECHDEL RESULTS? </h2>
+<h2> WHAT MOVIE CHARACTERISTICS INFLUENCE BECHDEL TEST RESULTS? </h2>
 <p> We can clearly see that the distribution of actresses in movies passing the test has a way higher mean. After all the other analyses, this seems to be the most suitable variable to predict whether a movie passes the test or not. However, there might confounding variables that prevent us from making this claim.
 </p>  
 {% include_relative _includes/plots/bechdel_plotly_histogram_with_kde_and_colors.html %}
@@ -303,11 +303,29 @@ Now, we can compare the distribution of movies passing the Bechdel test in each 
 </p>  
 
 <h2> CAN WE PREDICT IF A MOVIE WILL PASS OR FAIL BECHDEL? </h2>
-<p>Embarking on a data-driven exploration, we harnessed the power of machine learning to predict whether a film stands the Bechdel test. Armed with features like genres, release year, box office revenue, runtime, the count of female actresses, the proportion of female actresses, the age ratio among actors, and the film's originating countries, our model seeks to decipher the intricate landscape of female representation in cinema.
-In our quest for accuracy, we didn't settle for one-size-fits-all solutions. Instead, we experimented with a diverse array of machine learning algorithms, including Neural Networks, Random Forest, CatBoost, and Logistic Regression. Each algorithm brings its unique strengths and nuances to the table.
-Neural Networks dive deep into complex relationships within the data. Random Forest, a versatile ensemble method, excels at handling diverse features and nonlinear patterns. CatBoost, designed for categorical data like genres and countries. Logistic Regression, a classic yet effective choice, offers simplicity in interpretation.
-The beauty lies in the diversity of approaches – a fusion of computational prowess and cinematic intuition. Our exploration of these algorithms opens the door to understanding the nuances of female representation in films, bringing us one step closer to a more inclusive cinematic future. Join us on this journey as we decode the language of algorithms and unveil the untold stories behind the numbers.
-</p>
+<p>We harnessed the power of <span class="highlight">machine learning</span> to predict whether a film stands the Bechdel test. Our approach is rooted in a rich dataset comprising features such as:</p>
+
+<ul>
+  <li>Genres</li>
+  <li>Release year</li>
+  <li>Box office revenue</li>
+  <li>Runtime</li>
+  <li>Count and proportion of female actresses</li>
+  <li>Age ratio among actors</li>
+  <li>Origination countries</li>
+</ul>
+
+<p>In our quest for <span class="highlight">accuracy</span>, we didn't settle for one-size-fits-all solutions. Instead, we experimented with a diverse array of machine learning algorithms:</p>
+
+<ul class="algorithm-list">
+  <li><span class="highlight">Neural Networks</span> - Dive deep into complex relationships.</li>
+  <li><span class="highlight">Random Forest</span> - Excel at handling diverse features and nonlinear patterns.</li>
+  <li><span class="highlight">CatBoost</span> - Designed for categorical data like genres and countries.</li>
+  <li><span class="highlight">Logistic Regression</span> - A classic yet effective choice offering simplicity in interpretation.</li>
+</ul>
+
+<p class="conclusion">The beauty lies in the diversity of approaches – a fusion of computational prowess and cinematic intuition. Our exploration of these algorithms opens the door to understanding the nuances of female representation in films, bringing us one step closer to a more inclusive cinematic future. Join us on this journey as we decode the language of algorithms and unveil the untold stories behind the numbers.</p>
+
 <div style="text-align: center;">
     <img src="/assets/images/machine_learning_results.png" alt="machine learning" width="300" height="500" style="display: block; margin-left: auto; margin-right: auto;">
 </div>
