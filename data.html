@@ -67,7 +67,10 @@ The CMU dataset contains films up to 2017, while the Bechdel database contains f
 The study carried out here will be mainly representative of the years 2005-2012, which corresponds to the peak of films from the two data sources. 
 </p>
 {% include_relative _includes/number_peryear.html %}
- <p>
+  <p>
+  Another notable bias within the dataset, is that of country. Indeed, our data and thus our results will be most representative of the American film industry. Given that the CMU Movie Corpus was developed at an American university and the Bechdel test proposed by an American woman, this bias was to be expected.
+ </p> 
+  <p>
   Both datasets have similar percentages of scores on the Bechdel test, meaning that they represent a similar subset of movies when it comes to the test.
  </p> 
 {% include_relative _includes/plots/comparison_rating_bech_merged.html %}
@@ -75,6 +78,7 @@ The study carried out here will be mainly representative of the years 2005-2012,
   We note the importance of taking percentages when analyzing our data, as although there are high peaks of movies that pass the test in certain years, they are mirrored by a high number of failures. These peaks are brought about by the inequal balance of our data over time.
  </p> 
 {% include_relative _includes/passfail_peryear.html %}
+  
 
  
 <h2> Statistical Tests and Their Assumptions </h2>
